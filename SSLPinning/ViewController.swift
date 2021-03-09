@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             return
         }
 
-        NetworkManager().callAPI(withURL: url, isCertificatePinning: true) { (message) in
+        NetworkManager.shared.callAPI(withURL: url, isCertificatePinning: true) { (message) in
             let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             return
         }
 
-        NetworkManager().callAPI(withURL: url, isCertificatePinning: false) { (message) in
+        NetworkManager.shared.callAPI(withURL: url, isCertificatePinning: false) { (message) in
             let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)

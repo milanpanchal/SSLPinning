@@ -36,6 +36,10 @@ class NetworkManager: NSObject {
     private var isCertificatePinning: Bool = false
     private let sslPinningServer = SSLPinning.github
     
+    static let shared: NetworkManager = {
+        return NetworkManager()
+    }()
+
     func callAPI(withURL url: URL, isCertificatePinning: Bool, completion: @escaping (String) -> Void) {
         
         self.isCertificatePinning = isCertificatePinning
