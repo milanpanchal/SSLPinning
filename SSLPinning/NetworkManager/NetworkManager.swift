@@ -36,20 +36,25 @@ class NetworkManager: NSObject {
     private var isCertificatePinning: Bool = false
     private let sslPinningServer = SSLPinning.github
     
+    /// URLSession with configured certificate pinning
+    lazy var session: URLSession = {
+        URLSession(configuration: URLSessionConfiguration.ephemeral,
+                   delegate: self,
+                   delegateQueue: OperationQueue.main)
+    }()
+
     static let shared: NetworkManager = {
         return NetworkManager()
     }()
 
+    override init() {
+        super.init()
+    }
+    
     func callAPI(withURL url: URL, isCertificatePinning: Bool, completion: @escaping (String) -> Void) {
         
         self.isCertificatePinning = isCertificatePinning
         var responseMessage = ""
-
-        let session = URLSession(
-            configuration: .ephemeral,
-            delegate: self,
-            delegateQueue: nil
-        )
         
         let task = session.dataTask(with: url) { (data, response, error) in
             if error != nil {
@@ -95,13 +100,12 @@ extension NetworkManager: URLSessionDelegate {
             let isServerTrusted = SecTrustEvaluateWithError(serverTrust, nil)
             
             //Local and Remote certificate Data
-            let remoteCertificateData:NSData =  SecCertificateCopyData(certificate!)
-            let pathToCertificate = Bundle.main.path(forResource: sslPinningServer.cerName, ofType: "cer")
-            let localCertificateData:NSData = NSData(contentsOfFile: pathToCertificate!)!
+            let remoteCertificateData:NSData = SecCertificateCopyData(certificate!)
+            let localCertificateData = Certificate.certificateData(for: sslPinningServer.cerName)
             
             //Compare certificates
-            if(isServerTrusted &&
-                remoteCertificateData.isEqual(to: localCertificateData as Data)) {
+            if (isServerTrusted &&
+                remoteCertificateData.isEqual(to: localCertificateData)) {
                 // Certificate pinning is successfully completed
                 accept(with: serverTrust, completionHandler)
                 return

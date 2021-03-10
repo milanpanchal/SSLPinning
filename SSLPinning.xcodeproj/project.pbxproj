@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		865ADAA88E35F42BD5135862 /* Pods_SSLPinning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E5EEC98EE5C8DFB678A809 /* Pods_SSLPinning.framework */; };
 		E064D49525F763AA00274EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064D49425F763AA00274EB7 /* AppDelegate.swift */; };
 		E064D49725F763AA00274EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064D49625F763AA00274EB7 /* SceneDelegate.swift */; };
 		E064D49925F763AA00274EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064D49825F763AA00274EB7 /* ViewController.swift */; };
@@ -17,9 +18,14 @@
 		E064D4AE25F7883F00274EB7 /* github.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = E064D4AD25F7883F00274EB7 /* github.com.cer */; };
 		E064D4B125F788A400274EB7 /* stackexchange.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = E064D4B025F788A400274EB7 /* stackexchange.com.cer */; };
 		E064D4B425F78A7500274EB7 /* DataExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064D4B325F78A7500274EB7 /* DataExtenstion.swift */; };
+		E064D4C025F8D03100274EB7 /* TrustKitNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064D4BF25F8D03100274EB7 /* TrustKitNetworkManager.swift */; };
+		E064D4C325F8D36C00274EB7 /* Certificates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064D4C225F8D36C00274EB7 /* Certificates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		294E1CB207ED375D8B17784F /* Pods-SSLPinning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLPinning.debug.xcconfig"; path = "Target Support Files/Pods-SSLPinning/Pods-SSLPinning.debug.xcconfig"; sourceTree = "<group>"; };
+		85C3C298754DE6F0F993C85C /* Pods-SSLPinning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLPinning.release.xcconfig"; path = "Target Support Files/Pods-SSLPinning/Pods-SSLPinning.release.xcconfig"; sourceTree = "<group>"; };
+		D5E5EEC98EE5C8DFB678A809 /* Pods_SSLPinning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSLPinning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E064D49125F763AA00274EB7 /* SSLPinning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSLPinning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E064D49425F763AA00274EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E064D49625F763AA00274EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		E064D4AD25F7883F00274EB7 /* github.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = github.com.cer; sourceTree = "<group>"; };
 		E064D4B025F788A400274EB7 /* stackexchange.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = stackexchange.com.cer; sourceTree = "<group>"; };
 		E064D4B325F78A7500274EB7 /* DataExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtenstion.swift; sourceTree = "<group>"; };
+		E064D4BF25F8D03100274EB7 /* TrustKitNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustKitNetworkManager.swift; sourceTree = "<group>"; };
+		E064D4C225F8D36C00274EB7 /* Certificates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865ADAA88E35F42BD5135862 /* Pods_SSLPinning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE6ADE02AF6A61520C10FFB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5EEC98EE5C8DFB678A809 /* Pods_SSLPinning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5232DDCBA2D04BB52216967 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				294E1CB207ED375D8B17784F /* Pods-SSLPinning.debug.xcconfig */,
+				85C3C298754DE6F0F993C85C /* Pods-SSLPinning.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E064D48825F763AA00274EB7 = {
 			isa = PBXGroup;
 			children = (
 				E064D49325F763AA00274EB7 /* SSLPinning */,
 				E064D49225F763AA00274EB7 /* Products */,
+				D5232DDCBA2D04BB52216967 /* Pods */,
+				CE6ADE02AF6A61520C10FFB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,10 +94,11 @@
 			children = (
 				E064D4AC25F7882E00274EB7 /* Certificate */,
 				E064D4B625F78A7B00274EB7 /* Extension */,
+				E064D4C525F8D37600274EB7 /* Helper */,
 				E064D49425F763AA00274EB7 /* AppDelegate.swift */,
 				E064D49625F763AA00274EB7 /* SceneDelegate.swift */,
 				E064D49825F763AA00274EB7 /* ViewController.swift */,
-				E064D4A925F7654300274EB7 /* NetworkManager.swift */,
+				E064D4BD25F8D01500274EB7 /* NetworkManager */,
 				E064D49A25F763AA00274EB7 /* Main.storyboard */,
 				E064D49D25F763B100274EB7 /* Assets.xcassets */,
 				E064D49F25F763B100274EB7 /* LaunchScreen.storyboard */,
@@ -95,6 +124,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		E064D4BD25F8D01500274EB7 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				E064D4A925F7654300274EB7 /* NetworkManager.swift */,
+				E064D4BF25F8D03100274EB7 /* TrustKitNetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		E064D4C525F8D37600274EB7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E064D4C225F8D36C00274EB7 /* Certificates.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E064D4A525F763B100274EB7 /* Build configuration list for PBXNativeTarget "SSLPinning" */;
 			buildPhases = (
+				B5DC13C88FF80C58947C3991 /* [CP] Check Pods Manifest.lock */,
 				E064D48D25F763AA00274EB7 /* Sources */,
 				E064D48E25F763AA00274EB7 /* Frameworks */,
 				E064D48F25F763AA00274EB7 /* Resources */,
+				EC05171FBF822FD378EEA75D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,13 +210,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5DC13C88FF80C58947C3991 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSLPinning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC05171FBF822FD378EEA75D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSLPinning/Pods-SSLPinning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSLPinning/Pods-SSLPinning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSLPinning/Pods-SSLPinning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E064D48D25F763AA00274EB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E064D4C325F8D36C00274EB7 /* Certificates.swift in Sources */,
 				E064D4AA25F7654300274EB7 /* NetworkManager.swift in Sources */,
 				E064D49925F763AA00274EB7 /* ViewController.swift in Sources */,
+				E064D4C025F8D03100274EB7 /* TrustKitNetworkManager.swift in Sources */,
 				E064D49525F763AA00274EB7 /* AppDelegate.swift in Sources */,
 				E064D4B425F78A7500274EB7 /* DataExtenstion.swift in Sources */,
 				E064D49725F763AA00274EB7 /* SceneDelegate.swift in Sources */,
@@ -315,6 +407,7 @@
 		};
 		E064D4A625F763B100274EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294E1CB207ED375D8B17784F /* Pods-SSLPinning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +426,7 @@
 		};
 		E064D4A725F763B100274EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C3C298754DE6F0F993C85C /* Pods-SSLPinning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
