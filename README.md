@@ -1,14 +1,13 @@
 <a href="https://www.linkedin.com/in/milanpanchal/">
     <img src="https://img.shields.io/badge/Support-Recommend%2FEndorse%20me%20on%20Linkedin-blue?style=for-the-badge&logo=linkedin" alt="Support me on LinkedIn" /></a>
 
+![Platform](https://img.shields.io/badge/platform-ios-blue.svg?style=flat)
+![Swift version](https://img.shields.io/badge/Swift-5-orange.svg?style=flat)
+![License](https://img.shields.io/github/license/milanpanchal/SSLPinning)
 ![GitHub repo size](https://img.shields.io/github/repo-size/milanpanchal/SSLPinning)
 ![GitHub contributors](https://img.shields.io/github/contributors/milanpanchal/SSLPinning)
 ![GitHub stars](https://img.shields.io/github/stars/milanpanchal/SSLPinning?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/milanpanchal/SSLPinning?style=social)
-
-![Platform](https://img.shields.io/badge/platform-ios-blue.svg?style=flat)
-![Swift version](https://img.shields.io/badge/Swift-5-orange.svg?style=flat)
-![License](https://img.shields.io/github/license/milanpanchal/SSLPinning)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/milan_panchal24?style=social)](http://twitter.com/milan_panchal24)
 
